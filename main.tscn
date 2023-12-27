@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c2m425h7ms027"]
+[gd_scene load_steps=15 format=3 uid="uid://c2m425h7ms027"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_pw6hp"]
 [ext_resource type="Texture2D" uid="uid://pdt47o2uvovx" path="res://Blocky Characters/Faces/face_adventurer.png" id="2_afclk"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b88kb3ypy3rdn" path="res://Fantasy Town Kit/stallRed.glb" id="2_uhdfx"]
 [ext_resource type="PackedScene" uid="uid://srjedxy8tf4m" path="res://Food Kit/apple.glb" id="3_dk628"]
 [ext_resource type="FontFile" uid="uid://bh6rp22rl2st1" path="res://PoetsenOne-Regular.ttf" id="3_ltxv4"]
+[ext_resource type="Resource" uid="uid://4qb4xyoud8th" path="res://Dialogues/intro.tres" id="3_tiyac"]
 [ext_resource type="PackedScene" uid="uid://dygm430tufrp1" path="res://Food Kit/beet.glb" id="4_ge3c2"]
 [ext_resource type="PackedScene" uid="uid://2fsi6durrrgr" path="res://Blocky Characters/Models/Non-rigged/glTF/advancedCharacter.gltf" id="5_e8thf"]
 [ext_resource type="Texture2D" uid="uid://dgtskxhp5685l" path="res://Blocky Characters/Skins/Advanced/skin_adventurer.png" id="6_gptth"]
@@ -58,7 +59,7 @@ offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="DialogueUI" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("_dialogue_text")]
+[node name="DialogueUI" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("_dialogue_text", "_avatar")]
 layout_mode = 3
 anchors_preset = 2
 anchor_top = 1.0
@@ -66,6 +67,8 @@ anchor_bottom = 1.0
 grow_vertical = 0
 script = ExtResource("2_t4i0n")
 _dialogue_text = NodePath("TextBackground/DialogueText")
+_avatar = NodePath("TextureRect")
+_dialogue_resource = ExtResource("3_tiyac")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/DialogueUI"]
 layout_mode = 1
