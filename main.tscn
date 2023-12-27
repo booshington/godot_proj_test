@@ -58,7 +58,7 @@ offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="DialogueUI" type="Control" parent="CanvasLayer"]
+[node name="DialogueUI" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("_dialogue_text")]
 layout_mode = 3
 anchors_preset = 2
 anchor_top = 1.0
