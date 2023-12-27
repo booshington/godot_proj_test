@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://c2m425h7ms027"]
+[gd_scene load_steps=13 format=3 uid="uid://c2m425h7ms027"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_pw6hp"]
+[ext_resource type="Texture2D" uid="uid://pdt47o2uvovx" path="res://Blocky Characters/Faces/face_adventurer.png" id="2_afclk"]
 [ext_resource type="PackedScene" uid="uid://b88kb3ypy3rdn" path="res://Fantasy Town Kit/stallRed.glb" id="2_uhdfx"]
 [ext_resource type="PackedScene" uid="uid://srjedxy8tf4m" path="res://Food Kit/apple.glb" id="3_dk628"]
+[ext_resource type="FontFile" uid="uid://bh6rp22rl2st1" path="res://PoetsenOne-Regular.ttf" id="3_ltxv4"]
 [ext_resource type="PackedScene" uid="uid://dygm430tufrp1" path="res://Food Kit/beet.glb" id="4_ge3c2"]
 [ext_resource type="PackedScene" uid="uid://2fsi6durrrgr" path="res://Blocky Characters/Models/Non-rigged/glTF/advancedCharacter.gltf" id="5_e8thf"]
 [ext_resource type="Texture2D" uid="uid://dgtskxhp5685l" path="res://Blocky Characters/Skins/Advanced/skin_adventurer.png" id="6_gptth"]
@@ -54,6 +56,48 @@ offset_right = 4.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="DialogueUI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/DialogueUI"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+offset_right = 128.0
+grow_vertical = 0
+texture = ExtResource("2_afclk")
+expand_mode = 1
+
+[node name="TextBackground" type="ColorRect" parent="CanvasLayer/DialogueUI"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = -75.0
+offset_right = 669.0
+color = Color(0.894118, 0.894118, 0.894118, 1)
+
+[node name="DialogueText" type="Label" parent="CanvasLayer/DialogueUI/TextBackground"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ltxv4")
+theme_override_font_sizes/font_size = 20
+text = "Sample text"
+vertical_alignment = 1
 
 [node name="stallRed2" parent="." instance=ExtResource("2_uhdfx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84231, 0, 2.48042)
