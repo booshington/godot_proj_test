@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=3 format=3 uid="uid://4qb4xyoud8th"]
+
+[ext_resource type="Texture2D" uid="uid://dta4lpo01d8cd" path="res://Blocky Characters/Faces/face_robot.png" id="1_idd48"]
+[ext_resource type="Script" path="res://dialogue.gd" id="1_wa8y1"]
+
+[resource]
+script = ExtResource("1_wa8y1")
+avatar_texture = ExtResource("1_idd48")
+dialogue_slides = Array[String](["Welcome to the game!", "I am a robot", "Porkchopsandwiches!"])

@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://c2m425h7ms027"]
+[gd_scene load_steps=14 format=3 uid="uid://c2m425h7ms027"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_pw6hp"]
 [ext_resource type="Texture2D" uid="uid://pdt47o2uvovx" path="res://Blocky Characters/Faces/face_adventurer.png" id="2_afclk"]
+[ext_resource type="Script" path="res://dialogue_manager.gd" id="2_t4i0n"]
 [ext_resource type="PackedScene" uid="uid://b88kb3ypy3rdn" path="res://Fantasy Town Kit/stallRed.glb" id="2_uhdfx"]
 [ext_resource type="PackedScene" uid="uid://srjedxy8tf4m" path="res://Food Kit/apple.glb" id="3_dk628"]
 [ext_resource type="FontFile" uid="uid://bh6rp22rl2st1" path="res://PoetsenOne-Regular.ttf" id="3_ltxv4"]
@@ -63,6 +64,8 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 grow_vertical = 0
+script = ExtResource("2_t4i0n")
+_dialogue_text = NodePath("TextBackground/DialogueText")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/DialogueUI"]
 layout_mode = 1
